@@ -47,18 +47,6 @@ npm run dev:frontend   # Vite on http://localhost:5173
 npm run dev:backend    # Express on http://localhost:5000
 ```
 
----
-
-## 🔌 API
-
-The Vite dev server proxies all `/api/*` requests to the Express backend automatically — no CORS issues during development.
-
-| Method | Endpoint       | Description     |
-|--------|---------------|-----------------|
-| GET    | /api/health   | Health check    |
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer     | Technology                          |
