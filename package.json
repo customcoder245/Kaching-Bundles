@@ -1,0 +1,13 @@
+{
+  "name": "kaching_bundles",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
