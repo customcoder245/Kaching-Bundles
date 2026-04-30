@@ -29,10 +29,12 @@ const frontendPath = path.join(__dirname, '../../frontend/dist')
 app.use(express.static(frontendPath))
 
 // Handle SPA routing - send all non-API requests to index.html
-app.get('*', (req, res) => {
+app.use((req, res) => {
+    // If the request is for an API route that wasn't caught above, 404 it
     if (req.path.startsWith('/api')) {
         return res.status(404).json({ error: 'API route not found' })
     }
+    // Otherwise, serve the frontend index.html
     res.sendFile(path.join(frontendPath, 'index.html'))
 })
 

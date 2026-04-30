@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "concurrently -n FRONTEND,BACKEND,TUNNEL -c cyan,green,yellow \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\" \"npm run tunnel\"",
+    "dev:local": "concurrently -n FRONTEND,BACKEND -c cyan,green \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
     "build": "npm run build --workspaces --if-present",
     "start": "npm start --workspace=backend",
     "dev:frontend": "npm run dev --workspace=frontend",

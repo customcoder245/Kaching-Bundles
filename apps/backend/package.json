@@ -6,7 +6,7 @@
   "main": "src/index.js",
 
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"cloudflared tunnel run mytunnel\"",
+    "dev": "npm run server",
     "server": "nodemon src/index.js",
     "start": "node src/index.js"
   },
