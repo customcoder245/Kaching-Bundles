@@ -6,11 +6,12 @@
   ],
   "scripts": {
     "dev": "concurrently -n FRONTEND,BACKEND,TUNNEL -c cyan,green,yellow \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\" \"npm run tunnel\"",
+    "build": "npm run build --workspaces --if-present",
+    "start": "npm start --workspace=backend",
     "dev:frontend": "npm run dev --workspace=frontend",
     "dev:backend": "npm run dev --workspace=backend",
-    "dev:tunnel": "concurrently -n FRONTEND,BACKEND,TUNNEL -c cyan,green,yellow \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\" \"npm run tunnel\"",
     "tunnel": "cloudflared tunnel --url http://localhost:5000",
-    "lint": "npm run lint --workspace=frontend"
+    "lint": "npm run lint --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
