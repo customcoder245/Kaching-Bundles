@@ -16,6 +16,6 @@ EXPOSE 5000
 # Set environment variables (optional)
 ENV NODE_ENV=production
 
-# Start the server and Cloudflare tunnel (using concurrently)
-# The "dev" script defined in package.json runs both server and tunnel.
-CMD ["npm", "run", "dev"]
+# Start the server (production mode)
+# The "start" script runs the app without the Cloudflare tunnel.
+CMD ["npm", "start"]
